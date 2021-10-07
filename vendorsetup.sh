@@ -13,7 +13,7 @@ export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER="1"
 export OF_DISABLE_MIUI_SPECIFIC_FEATURES="0"
 # export OF_VANILLA_BUILD="1"
 export LC_ALL="C"
-export TARGET_DEVICE_ALT="fajita, oneplus 6t, OnePlus6t"
+export TARGET_DEVICE_ALT="kebab, oneplus 8t, OnePlus8t"
 
 # Use magisk boot for patching
 export OF_USE_MAGISKBOOT=1
