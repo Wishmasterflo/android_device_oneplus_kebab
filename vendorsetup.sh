@@ -64,5 +64,3 @@ export FOX_USE_BASH_SHELL="1"
 export FOX_USE_LZMA_COMPRESSION="1"
 export FOX_USE_NANO_EDITOR="1"
 #export OF_USE_GREEN_LED="0"
-
-add_lunch_combo omni_kebab-eng
