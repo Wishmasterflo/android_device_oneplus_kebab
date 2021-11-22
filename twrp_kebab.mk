@@ -15,7 +15,7 @@
 #
 
 # Release name
-PRODUCT_RELEASE_NAME := kebab
+PRODUCT_RELEASE_NAME := OnePlus8T
 
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/twrp/config/common.mk)
