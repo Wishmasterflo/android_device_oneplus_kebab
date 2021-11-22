@@ -15,5 +15,5 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_kebab.mk
+    $(LOCAL_DIR)/twrp_OnePlus8T.mk
 
