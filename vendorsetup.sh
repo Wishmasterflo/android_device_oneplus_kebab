@@ -22,11 +22,12 @@ export OF_DONT_PATCH_ENCRYPTED_DEVICE=1
 export OF_AB_DEVICE="1"
 
 # Screen specifications
-#export OF_SCREEN_H=2340
-export OF_STATUS_H=-80
+export OF_SCREEN_H=2400
+export OF_STATUS_H=100
 export OF_STATUS_INDENT_LEFT=48
 export OF_STATUS_INDENT_RIGHT=48
 export OF_ALLOW_DISABLE_NAVBAR=0
+export OF_CLOCK_POS=1
 
 # Device stuff
 export OF_KEEP_FORCED_ENCRYPTION="1"
