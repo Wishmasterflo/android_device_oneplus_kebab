@@ -1,7 +1,18 @@
+## OrangeFox Recovery Project Oneplus 8t Changelog
+
+R11.1 V2 26-Jan-2022
+* Changed device name from kebab to OnePlus8T
+* Some small bug fixes
+
+R11.1 V1 20-Jan-2022
+* Initial release of OrangeFox Recovery for the Oneplus8T
+
+
 # Device Tree for 8T (kebab) for TWRP
 ## Disclaimer - Unofficial TWRP!
 
 ## Adjusted to build OrangeFox recovery from this for the Oneplus 8t
+
 
 ## Setup repo tool
 Setup repo tool from here https://source.android.com/setup/develop#installing-repo
