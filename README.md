@@ -8,6 +8,7 @@ R11.1 V1 20-Jan-2022
 * Initial release of OrangeFox Recovery for the Oneplus8T
 
 
+
 # Device Tree for 8T (kebab) for TWRP
 ## Disclaimer - Unofficial TWRP!
 
