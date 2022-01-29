@@ -1,7 +1,7 @@
 # Device Tree for 8T (kebab) for TWRP
 ## Disclaimer - Unofficial TWRP!
-These are personal test builds of mine. In no way do I hold responsibility if it/you messes up your device.
-Proceed at your own risk.
+
+## Adjusted to build OrangeFox recovery from this for the Oneplus 8t
 
 ## Setup repo tool
 Setup repo tool from here https://source.android.com/setup/develop#installing-repo
@@ -57,6 +57,7 @@ fastboot flash recovery recovery.img
 Kernel: https://github.com/LineageOS/android_kernel_oneplus_sm8250
 
 ##### Credits
+- theincognito-inc for this TWRP device tree for the Oneplus 8t
 - bigbiff for decryption
 - Systemad for original tree
 - CaptainThrowback for original tree
