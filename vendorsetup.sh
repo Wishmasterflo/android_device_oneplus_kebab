@@ -23,6 +23,7 @@ export OF_AB_DEVICE="1"
 
 # Screen specifications
 export OF_SCREEN_H=2400
+export OF_SCREEN_W=1080
 export OF_STATUS_H=100
 export OF_STATUS_INDENT_LEFT=48
 export OF_STATUS_INDENT_RIGHT=48
