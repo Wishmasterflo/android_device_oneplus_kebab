@@ -62,6 +62,9 @@ export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
 export OF_QUICK_BACKUP_LIST="/boot;/data;/system_image;/vendor_image;"
 # -- end R11 settings --
 
+# Magisk
+export FOX_USE_SPECIFIC_MAGISK_ZIP="~/Magisk/Magisk-v24.1.zip"
+
 # Add some extras
 export FOX_USE_ZIP_BINARY="1"
 export FOX_USE_TAR_BINARY="1"
@@ -70,3 +73,4 @@ export FOX_REPLACE_BUSYBOX_PS="1"
 export FOX_USE_BASH_SHELL="1"
 export FOX_USE_LZMA_COMPRESSION="1"
 export FOX_USE_NANO_EDITOR="1"
+export OF_DONT_KEEP_LOG_HISTORY="1"
