@@ -63,7 +63,7 @@ export OF_QUICK_BACKUP_LIST="/boot;/data;/system_image;/vendor_image;"
 # -- end R11 settings --
 
 # Magisk
-export FOX_USE_SPECIFIC_MAGISK_ZIP="~/Magisk/Magisk-v24.1.zip"
+export FOX_DELETE_MAGISK_ADDON="1"
 
 # Add some extras
 export FOX_USE_ZIP_BINARY="1"
