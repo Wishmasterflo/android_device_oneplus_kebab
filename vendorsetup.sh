@@ -62,6 +62,9 @@ export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
 export OF_QUICK_BACKUP_LIST="/boot;/data;/system_image;/vendor_image;"
 # -- end R11 settings --
 
+# -- add settings for Android 12 --
+export OF_SKIP_DECRYPTED_ADOPTED_STORAGE="1"
+
 # Add some extras
 export FOX_USE_ZIP_BINARY="1"
 export FOX_USE_TAR_BINARY="1"
