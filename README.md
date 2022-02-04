@@ -1,5 +1,11 @@
 ## OrangeFox Recovery Project Oneplus 8t Changelog
 
+R11.1 V3 04-Feb-2022
+* Synced with latest OrangeFox R11.1 changes
+* Added Maintainer avatar picture
+* Added some vars for Android 12
+* Fixed screen specification settings
+
 R11.1 V2 26-Jan-2022
 * Changed device name from kebab to OnePlus8T
 * Some small bug fixes
