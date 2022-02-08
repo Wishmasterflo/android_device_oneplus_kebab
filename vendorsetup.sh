@@ -10,8 +10,8 @@ export ALLOW_MISSING_DEPENDENCIES=true
 export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER="1"
 export OF_DISABLE_MIUI_SPECIFIC_FEATURES="0"
 export LC_ALL="C"
-export OF_TARGET_DEVICES="OnePlus8T, OnePlus 8t, kebab, Kebab, lemonkebab"
-export TARGET_DEVICE_ALT="kebab, Kebab, OnePlus8t, OnePlus 8t, lemonkebab"
+export TARGET_DEVICE_ALT="kebab, Kebab, lemonkebab, OnePlus8t, OnePlus 8t"
+export OF_TARGET_DEVICES="kebab, Kebab, lemonkebab, OnePlus8t, OnePlus 8t"
 
 # Use magisk boot for patching
 export OF_USE_MAGISKBOOT=1
@@ -74,3 +74,5 @@ export FOX_USE_BASH_SHELL="1"
 export FOX_USE_LZMA_COMPRESSION="1"
 export FOX_USE_NANO_EDITOR="1"
 export OF_DONT_KEEP_LOG_HISTORY="1"
+export OF_NO_SPLASH_CHANGE="1"
+export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR="1"
