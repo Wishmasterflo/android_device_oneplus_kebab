@@ -1,5 +1,11 @@
 ## OrangeFox Recovery Project Oneplus 8t Changelog
 
+R11.1 V4 14-Feb-2022
+* Synced with latest OrangeFox R11.1 changes
+* Added lemonkebab as TARGET_DEVICE_ALT
+* Removed option to change the splash screen image (as this is not working correctly right now!)
+* Adjusted some settings for OrangeFox
+
 R11.1 V3 04-Feb-2022
 * Synced with latest OrangeFox R11.1 changes
 * Added Maintainer avatar picture
