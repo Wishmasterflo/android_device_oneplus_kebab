@@ -27,6 +27,13 @@
 
 import /init.recovery.qcom_decrypt.rc
 
+service mount-dynamic-rw /system/bin/mount-dynamic-rw.sh
+    user root
+    group root
+    disabled
+    oneshot
+    seclabel u:r:recovery:s0
+
 service unified-script /system/bin/unified-script.sh
     user root
     group root
@@ -34,7 +41,7 @@ service unified-script /system/bin/unified-script.sh
     oneshot
     seclabel u:r:recovery:s0
 
-service mount-dynamic-rw /system/bin/mount-dynamic-rw.sh
+service make-fake-partitions-service /system/bin/make-fake-partitions-service.sh reserve
     user root
     group root
     disabled
@@ -52,7 +59,8 @@ on init
 on boot
     setprop sys.usb.config adb
 
-    #chmod 0777 mount-dynamic-rw.sh
+    #chmod 0777 /system/bin/mount-dynamic-rw.sh
+    #start mount-dynamic-rw
     chmod 0777 /system/bin/unified-script.sh
     start unified-script
     #start mount-dynamic-rw
@@ -62,10 +70,12 @@ on fs
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
 
     # This must be under on fs, otherwise update_engine wont map the partitions and exit installation
-    symlink /dev/block/bootdevice/by-name/oem_stanvbk /dev/block/bootdevice/by-name/oem_stanvbk_a
-    symlink /dev/block/bootdevice/by-name/oem_stanvbk /dev/block/bootdevice/by-name/oem_stanvbk_b
-    symlink /dev/block/bootdevice/by-name/oem_dycnvbk /dev/block/bootdevice/by-name/oem_dycnvbk_a
-    symlink /dev/block/bootdevice/by-name/oem_dycnvbk /dev/block/bootdevice/by-name/oem_dycnvbk_b
+    symlink /dev/block/bootdevice/by-name/mdm_oem_stanvbk /dev/block/bootdevice/by-name/mdm_oem_stanvbk_a
+    symlink /dev/block/bootdevice/by-name/mdm_oem_stanvbk /dev/block/bootdevice/by-name/mdm_oem_stanvbk_b
+    symlink /dev/block/bootdevice/by-name/mdm_oem_dycnvbk /dev/block/bootdevice/by-name/mdm_oem_dycnvbk_a
+    symlink /dev/block/bootdevice/by-name/mdm_oem_dycnvbk /dev/block/bootdevice/by-name/mdm_oem_dycnvbk_b
+    symlink /dev/block/bootdevice/by-name/spunvm /dev/block/bootdevice/by-name/spunvm_a
+    symlink /dev/block/bootdevice/by-name/spunvm /dev/block/bootdevice/by-name/spunvm_b
 
     # Set fscklog permission
     chown root system /dev/fscklogs/log
