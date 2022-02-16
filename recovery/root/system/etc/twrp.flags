@@ -4,8 +4,9 @@
 /metadata      ext4    /dev/block/bootdevice/by-name/metadata                    flags=display="Metadata";backup=1;wrappedkey
 
 # Persistent Firmware & Properties
-/persist					ext4				/dev/block/bootdevice/by-name/persist 							flags=display="Persist";fsflags=ro;backup=1
-/firmware      vfat    /dev/block/bootdevice/by-name/modem                       flags=display="Firmware"
+/persist					ext4				/dev/block/bootdevice/by-name/persist 							flags=display="Persist";fsflags=ro
+/persist_image					emmc				/dev/block/bootdevice/by-name/persist 				flags=display="Persist";backup=1
+/firmware      vfat    /dev/block/bootdevice/by-name/modem                        flags=display="Firmware"
 /misc          emmc    /dev/block/bootdevice/by-name/misc
 
 # Modem partitions
