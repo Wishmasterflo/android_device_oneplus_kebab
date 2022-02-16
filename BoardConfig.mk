@@ -51,6 +51,7 @@ BOARD_KERNEL_CMDLINE := \
     androidboot.console=ttyMSM0 \
     androidboot.hardware=qcom \
     androidboot.memcg=1 \
+    androidboot.selinux=permissive \
     androidboot.usbcontroller=a600000.dwc3 \
     lpm_levels.sleep_disabled=1 \
     msm_rtb.filter=0x237 \
@@ -178,8 +179,7 @@ TW_INCLUDE_NTFS_3G := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_NO_BIND_SYSTEM := true
 TW_NO_EXFAT_FUSE := true
-TW_OVERRIDE_SYSTEM_PROPS := \
-    "ro.build.product;ro.build.version.incremental;ro.product.device=ro.product.system.device;ro.product.model=ro.product.system.model;ro.product.name=ro.product.system.name"
+TW_OVERRIDE_SYSTEM_PROPS := "ro.build.fingerprint=ro.system.build.fingerprint;ro.build.version.incremental;ro.build.version.ota"
 TW_RECOVERY_ADDITIONAL_RELINK_BINARY_FILES += \
     $(TARGET_OUT_EXECUTABLES)/ashmemd \
     $(TARGET_OUT_EXECUTABLES)/strace
