@@ -20,6 +20,7 @@ export OF_DONT_PATCH_ENCRYPTED_DEVICE=1
 
 # We have a/b partitions
 export OF_AB_DEVICE="1"
+export OF_VIRTUAL_AB_DEVICE=1
 
 # Screen specifications
 #export OF_SCREEN_H=1920
@@ -74,5 +75,4 @@ export FOX_USE_BASH_SHELL="1"
 export FOX_USE_LZMA_COMPRESSION="1"
 export FOX_USE_NANO_EDITOR="1"
 export OF_DONT_KEEP_LOG_HISTORY="1"
-export OF_NO_SPLASH_CHANGE="1"
 export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR="1"
