@@ -8,7 +8,6 @@ export OF_MAINTAINER=Wishmasterflo
 export FOX_BUILD_DEVICE="OnePlus8T"
 export ALLOW_MISSING_DEPENDENCIES=true
 export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER="1"
-export OF_DISABLE_MIUI_SPECIFIC_FEATURES="0"
 export LC_ALL="C"
 export TARGET_DEVICE_ALT="kebab, Kebab, lemonkebab, OnePlus8t, OnePlus 8t"
 export OF_TARGET_DEVICES="kebab, Kebab, lemonkebab, OnePlus8t, OnePlus 8t"
@@ -49,7 +48,8 @@ export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR=1
 export OF_KEEP_DM_VERITY=1
 export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES=1
 export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR=1
-export OF_DISABLE_MIUI_OTA_BY_DEFAULT=0
+export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
+export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES=0
 
 # For some reason this is dumb and necessary
 export FOX_BUGGED_AOSP_ARB_WORKAROUND="1601559499"
@@ -59,7 +59,6 @@ export FOX_R11=1
 export FOX_ADVANCED_SECURITY=1
 export FOX_ENABLE_APP_MANAGER=1
 export OF_USE_TWRP_SAR_DETECT=1
-export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
 export OF_QUICK_BACKUP_LIST="/boot;/data;/system_image;/vendor_image;"
 # -- end R11 settings --
 
