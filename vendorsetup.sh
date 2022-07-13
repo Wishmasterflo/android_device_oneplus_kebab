@@ -1,7 +1,7 @@
 export TARGET_ARCH="arm64-v8a"
 
 # Some about us
-export FOX_VERSION="R11.1"
+export FOX_VERSION="R12.1"
 export OF_MAINTAINER=Wishmasterflo
 
 # Build environment stuffs
@@ -54,16 +54,13 @@ export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES=0
 # For some reason this is dumb and necessary
 export FOX_BUGGED_AOSP_ARB_WORKAROUND="1601559499"
 
-# -- add settings for R11 --
-export FOX_R11=1
+# -- add settings for R12.1 --
 export FOX_ADVANCED_SECURITY=1
-export FOX_ENABLE_APP_MANAGER=1
-export OF_USE_TWRP_SAR_DETECT=1
 export OF_QUICK_BACKUP_LIST="/boot;/data;/system_image;/vendor_image;"
-# -- end R11 settings --
+
 
 # -- add settings for Android 12 --
-export OF_SKIP_DECRYPTED_ADOPTED_STORAGE="1"
+# export OF_FIX_DECRYPTION_ON_DATA_MEDIA="1"
 
 # Add some extras
 export FOX_USE_ZIP_BINARY="1"
