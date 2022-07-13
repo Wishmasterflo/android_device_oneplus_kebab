@@ -1,45 +1,11 @@
 ## OrangeFox Recovery Project Oneplus 8t Changelog
 
-R11.1 V9 01-June-2022
-* Synced with latest OrangeFox R11.1 changes
-
-R11.1 V8 07-May-2022
-* Synced with latest OrangeFox R11.1 changes
-
-R11.1 V7 23-Apr-2022
-* Synced with latest OrangeFox R11.1 changes
-
-R11.1 V6 11-Mar-2022
-* Synced with latest OrangeFox R11.1 changes
-
-R11.1 V5 19-Feb-2022
-* Merged latest changes from TWRP into Orangefox
-* Synced with latest OrangeFox R11.1 changes
-* Fixed lemonkebab as TARGET_DEVICE_ALT
-
-R11.1 V4 14-Feb-2022
-* Synced with latest OrangeFox R11.1 changes
-* Added lemonkebab as TARGET_DEVICE_ALT
-* Removed option to change the splash screen image (as this is not working correctly right now!)
-* Adjusted some settings for OrangeFox
-
-R11.1 V3 04-Feb-2022
-* Synced with latest OrangeFox R11.1 changes
-* Added Maintainer avatar picture
-* Added some vars for Android 12
-* Fixed screen specification settings
-
-R11.1 V2 26-Jan-2022
-* Changed device name from kebab to OnePlus8T
-* Some small bug fixes
-
-R11.1 V1 20-Jan-2022
-* Initial release of OrangeFox Recovery for the Oneplus8T
+R12.1 
 
 
 
 # Device Tree for 8T (kebab) for TWRP
-## Disclaimer - Unofficial TWRP!
+## Disclaimer - Unofficial TWRP bringup for Android 12.1
 
 ## Adjusted to build OrangeFox recovery from this for the Oneplus 8t
 
