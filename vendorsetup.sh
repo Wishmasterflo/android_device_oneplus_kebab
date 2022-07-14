@@ -55,7 +55,6 @@ export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES=0
 export FOX_BUGGED_AOSP_ARB_WORKAROUND="1601559499"
 
 # -- add settings for R12.1 --
-export TARGET_SUPPORTS_64_BIT_APPS:=true
 export FOX_ADVANCED_SECURITY=1
 export OF_QUICK_BACKUP_LIST="/boot;/data;/system_image;/vendor_image;"
 
