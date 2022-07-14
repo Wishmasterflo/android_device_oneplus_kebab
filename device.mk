@@ -82,14 +82,12 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES_ENG += \
     tzdata_twrp
 
-# Additional binaries & libraries needed for recovery
-TARGET_RECOVERY_DEVICE_MODULES += \
-    libxml2
+# Libraries
+PRODUCT_COPY_FILES += \
+$(OUT_DIR)/target/product/$(PRODUCT_RELEASE_NAME)/obj/SHARED_LIBRARIES/libkeystoreinfo_intermediates/libkeystoreinfo.so.toc:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libkeystoreinfo.so.toc
 
-TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so
-
-
+PRODUCT_COPY_FILES += \
+$(OUT_DIR)/target/product/$(PRODUCT_RELEASE_NAME)/obj/SHARED_LIBRARIES/libtar_intermediates/LINKED/libtar.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libtar.so
 
 #TWRP
 PRODUCT_COPY_FILES += \
