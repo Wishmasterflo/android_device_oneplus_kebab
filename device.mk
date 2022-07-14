@@ -82,13 +82,6 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES_ENG += \
     tzdata_twrp
 
-# Libraries
-PRODUCT_COPY_FILES += \
-$(OUT_DIR)/target/product/$(PRODUCT_RELEASE_NAME)/obj/SHARED_LIBRARIES/libkeystoreinfo_intermediates/libkeystoreinfo.so.toc:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libkeystoreinfo.so.toc
-
-PRODUCT_COPY_FILES += \
-$(OUT_DIR)/target/product/$(PRODUCT_RELEASE_NAME)/obj/SHARED_LIBRARIES/libtar_intermediates/LINKED/libtar.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libtar.so
-
 #TWRP
 PRODUCT_COPY_FILES += \
     device/oneplus/OnePlus8T/prebuilt/systemmanifest.xml:$(TARGET_COPY_OUT_RECOVERY)/root/system/manifest.xml \
