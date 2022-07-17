@@ -60,7 +60,7 @@ export OF_QUICK_BACKUP_LIST="/boot;/data;/system_image;/vendor_image;"
 
 
 # -- add settings for Android 12 --
-# export OF_FIX_DECRYPTION_ON_DATA_MEDIA="1"
+export OF_FIX_DECRYPTION_ON_DATA_MEDIA="1"
 
 # Add some extras
 export FOX_USE_ZIP_BINARY="1"
