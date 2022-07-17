@@ -1,7 +1,8 @@
 ## OrangeFox Recovery Project Oneplus 8t Changelog
 
-R12.1 
+OrangeFox R12.1 
 
+Added support for Android 12 and synced with latest TWRP 12.1 sources
 
 
 # Device Tree for 8T (kebab) for TWRP
