@@ -58,7 +58,6 @@ export FOX_BUGGED_AOSP_ARB_WORKAROUND="1601559499"
 export FOX_ADVANCED_SECURITY=1
 export OF_QUICK_BACKUP_LIST="/boot;/data;/system_image;/vendor_image;"
 
-
 # -- add settings for Android 12 --
 export OF_FIX_DECRYPTION_ON_DATA_MEDIA="1"
 
