@@ -87,6 +87,16 @@
         <name>netutils-wrapper</name>
         <version>1.0</version>
     </hal>
+       <hal format="hidl">
+        <name>android.hardware.keymaster</name>
+        <transport>hwbinder</transport>
+        <version>4.0</version>
+        <interface>
+            <name>IKeymasterDevice</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@4.0::IKeymasterDevice/default</fqname>
+    </hal>
     <system-sdk>
         <version>28</version>
         <version>29</version>
