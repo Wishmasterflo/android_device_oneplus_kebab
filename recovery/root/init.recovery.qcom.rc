@@ -50,15 +50,16 @@ service make-fake-partitions-service /system/bin/make-fake-partitions-service.sh
 
 on init
     write /sys/class/backlight/panel0-backlight/brightness 200
-    start boot-hal-1-1
+    start boot-hal-1-0
 
     # Create location for fs_mgr to store abbreviated output from filesystem
     # checker programs.
     mkdir /dev/fscklogs 0770 root system
 
 on boot
+    start health-hal-2-1
     setprop sys.usb.config adb
-
+    
     #chmod 0777 /system/bin/mount-dynamic-rw.sh
     #start mount-dynamic-rw
     chmod 0777 /system/bin/unified-script.sh
@@ -68,7 +69,8 @@ on boot
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
-
+    start boot-hal-1-0
+    
     # This must be under on fs, otherwise update_engine wont map the partitions and exit installation
     symlink /dev/block/bootdevice/by-name/mdm_oem_stanvbk /dev/block/bootdevice/by-name/mdm_oem_stanvbk_a
     symlink /dev/block/bootdevice/by-name/mdm_oem_stanvbk /dev/block/bootdevice/by-name/mdm_oem_stanvbk_b
