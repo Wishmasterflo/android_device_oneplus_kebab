@@ -27,4 +27,4 @@
 #/keymaster       	emmc       	/dev/block/bootdevice/by-name/keymaster             flags=slotselect
 
 # Removable storage
-/usbstorage      	vfat    		/dev/block/sdg1        /dev/block/sdg     					flags=fsflags=utf8;display="USB OTG";storage;wipeingui;removable
+/usbstorage      	auto    		/dev/block/sdg1        /dev/block/sdg     					flags=fsflags=utf8;display="USB OTG";storage;wipeingui;removable
