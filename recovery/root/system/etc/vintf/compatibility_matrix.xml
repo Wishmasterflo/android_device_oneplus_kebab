@@ -232,8 +232,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.keymaster</name>
-        <version>3.0</version>
-        <version>4.0</version>
+        <version>4.1</version>
         <interface>
             <name>IKeymasterDevice</name>
             <instance>default</instance>
@@ -241,7 +240,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.keymaster</name>
-        <version>4.0</version>
+        <version>4.1</version>
         <interface>
             <name>IKeymasterDevice</name>
             <instance>strongbox</instance>
