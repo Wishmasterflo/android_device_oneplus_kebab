@@ -74,6 +74,9 @@ PRODUCT_PACKAGES_ENG += \
     qcom_decrypt \
     qcom_decrypt_fbe
 
+# Hidl Service
+PRODUCT_ENFORCE_VINTF_MANIFEST := true
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
