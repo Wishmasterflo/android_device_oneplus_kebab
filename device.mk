@@ -1,10 +1,20 @@
 # Inherit from common AOSP config
 $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
+
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 # Inherit from virtual AB OTA config
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
 LOCAL_PATH := device/oneplus/OnePlus8T
+
+#SHIPPING API
+PRODUCT_SHIPPING_API_LEVEL := 30
+
+#VNDK API
+PRODUCT_TARGET_VNDK_VERSION := 31
 
 # define hardware platform
 PRODUCT_PLATFORM := kona
@@ -17,11 +27,12 @@ AB_OTA_UPDATER := true
 # more partitions to this list for the bootloader and radio.
 AB_OTA_PARTITIONS += \
     boot \
+	dtbo \
     system \
     system_ext \
     vendor \
     vbmeta \
-    dtbo
+	vbmeta_system
 
 PRODUCT_PACKAGES += \
     otapreopt_script \
@@ -50,13 +61,23 @@ PRODUCT_PACKAGES += \
 # vendor and odm and we also dont want to AB update them
 #TARGET_ENFORCE_AB_OTA_PARTITION_LIST := true
 
+#AVB
+BOARD_AVB_ENABLE := true
+BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --set_hashtree_disabled_flag
+BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 2
+BOARD_AVB_VBMETA_SYSTEM := system product system_ext
+BOARD_AVB_VBMETA_SYSTEM_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
+BOARD_AVB_VBMETA_SYSTEM_ALGORITHM := SHA256_RSA2048
+BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
+BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 1
+
 # Boot control HAL
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl \
-    android.hardware.boot@1.0-service \
-    android.hardware.boot@1.0-impl-wrapper.recovery \
-    android.hardware.boot@1.0-impl-wrapper \
-    android.hardware.boot@1.0-impl.recovery \
+    android.hardware.boot@1.1-impl \
+    android.hardware.boot@1.1-service \
+    android.hardware.boot@1.1-impl-wrapper.recovery \
+    android.hardware.boot@1.1-impl-wrapper \
+    android.hardware.boot@1.1-impl.recovery \
     bootctrl.$(PRODUCT_PLATFORM) \
     bootctrl.$(PRODUCT_PLATFORM).recovery \
 
@@ -80,6 +101,16 @@ PRODUCT_ENFORCE_VINTF_MANIFEST := true
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
+
+#Display	
+PRODUCT_SOONG_NAMESPACES += \
+    vendor/qcom/opensource/commonsys-intf/display
+	
+RECOVERY_LIBRARY_SOURCE_FILES += \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
+    $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@1.0.so \
+    $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@2.0.so \
+    $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/libdisplayconfig.qti.so \
 
 # tzdata
 PRODUCT_PACKAGES_ENG += \
