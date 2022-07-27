@@ -33,6 +33,12 @@ service mount-dynamic-rw /system/bin/mount-dynamic-rw.sh
     disabled
     oneshot
     seclabel u:r:recovery:s0
+	
+service hal_cryptoeng_oplus /system/bin/hw/vendor.oplus.hardware.cryptoeng@1.0-service
+    class late_start
+    user system
+    group system input sdcard_rw sdcard_r
+    seclabel u:r:recovery:s0
 
 service unified-script /system/bin/unified-script.sh
     user root
@@ -48,29 +54,28 @@ service make-fake-partitions-service /system/bin/make-fake-partitions-service.sh
     oneshot
     seclabel u:r:recovery:s0
 
+
 on init
     write /sys/class/backlight/panel0-backlight/brightness 200
-    start boot-hal-1-0
-
+    start boot-hal-1-1
+    setprop sys.usb.config adb
     # Create location for fs_mgr to store abbreviated output from filesystem
     # checker programs.
     mkdir /dev/fscklogs 0770 root system
 
 on boot
-    start health-hal-2-1
     setprop sys.usb.config adb
-    
     #chmod 0777 /system/bin/mount-dynamic-rw.sh
     #start mount-dynamic-rw
     chmod 0777 /system/bin/unified-script.sh
     start unified-script
-    #start mount-dynamic-rw
+    chmod 0777 /system/bin/make-fake-partitions-service.sh
+    start make-fake-partitions-service
 
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
-    start boot-hal-1-0
-    
+
     # This must be under on fs, otherwise update_engine wont map the partitions and exit installation
     symlink /dev/block/bootdevice/by-name/mdm_oem_stanvbk /dev/block/bootdevice/by-name/mdm_oem_stanvbk_a
     symlink /dev/block/bootdevice/by-name/mdm_oem_stanvbk /dev/block/bootdevice/by-name/mdm_oem_stanvbk_b
