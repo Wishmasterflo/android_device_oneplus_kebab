@@ -1,5 +1,8 @@
 ## OrangeFox Recovery Project Oneplus 8t Changelog
 
+R11.1 V10 08-Aug-2022
+* Synced with latest OrangeFox R11.1 changes
+
 R11.1 V9 01-June-2022
 * Synced with latest OrangeFox R11.1 changes
 
