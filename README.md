@@ -2,7 +2,6 @@
 
 R11.1 V11 23-Aug-2022
 * Synced with latest OrangeFox R11.1 changes
-* Added decryption for Android 12 and Android 13 ROMs
 
 R11.1 V10 08-Aug-2022
 * Synced with latest OrangeFox R11.1 changes
