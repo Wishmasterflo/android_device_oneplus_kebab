@@ -1,5 +1,8 @@
 ## OrangeFox Recovery Project Oneplus 8t Changelog
 
+R11.1 V13 06-Sep-2022
+* Switched to Meteoric Kernel to Support Oneplus 9R
+
 R11.1 V12 02-Sep-2022
 * Synced with latest OrangeFox R11.1 changes
 
