@@ -1,4 +1,9 @@
-## OrangeFox Recovery Project Oneplus 8t Changelog
+## OrangeFox Recovery Project Oneplus 8t/9r Changelog
+
+R11.1 V14 07-Nov-2022
+* Adjusted some devive specific settings
+* Exclude /data/fonts from Backup to avoid errors during Backup
+* Changed splash screen background color to black
 
 R11.1 V13 06-Sep-2022
 * Switched to Meteoric Kernel to Support Oneplus 9R
