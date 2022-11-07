@@ -9,8 +9,8 @@ export FOX_BUILD_DEVICE="OnePlus8T"
 export ALLOW_MISSING_DEPENDENCIES=true
 export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER="1"
 export LC_ALL="C"
-export TARGET_DEVICE_ALT="kebab, Kebab, lemonkebab, OnePlus8t, OnePlus 8t"
-export OF_TARGET_DEVICES="kebab, Kebab, lemonkebab, OnePlus8t, OnePlus 8t"
+export TARGET_DEVICE_ALT="kebab, Kebab, lemonades, lemonkebab, OnePlus8t, OnePlus 8t, OnePlus9r, Oneplus 9r"
+export OF_TARGET_DEVICES="kebab, Kebab, lemonades, lemonkebab, OnePlus8t, OnePlus 8t, OnePlus9r, Oneplus 9r"
 
 # Use magisk boot for patching
 export OF_USE_MAGISKBOOT=1
@@ -35,6 +35,7 @@ export OF_KEEP_FORCED_ENCRYPTION="1"
 export OF_NO_TREBLE_COMPATIBILITY_CHECK="1"
 export OF_FBE_METADATA_MOUNT_IGNORE=1
 export OF_PATCH_AVB20=1
+export OF_AB_DEVICE_WITH_RECOVERY_PARTITION=1
 
 # Run a process after formatting data to work-around MTP issues
 export OF_RUN_POST_FORMAT_PROCESS=1
@@ -59,7 +60,7 @@ export FOX_R11=1
 export FOX_ADVANCED_SECURITY=1
 export FOX_ENABLE_APP_MANAGER=1
 export OF_USE_TWRP_SAR_DETECT=1
-export OF_QUICK_BACKUP_LIST="/boot;/data;/system_image;/vendor_image;"
+export OF_QUICK_BACKUP_LIST="/boot;/data;/super;"
 # -- end R11 settings --
 
 # -- add settings for Android 12 --
@@ -74,4 +75,4 @@ export FOX_USE_BASH_SHELL="1"
 export FOX_USE_LZMA_COMPRESSION="1"
 export FOX_USE_NANO_EDITOR="1"
 export OF_DONT_KEEP_LOG_HISTORY="1"
-export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR="1"
+export OF_NO_SPLASH_CHANGE="1"
