@@ -1,5 +1,11 @@
 ## OrangeFox Recovery Project Oneplus 8t/9r Changelog
 
+R11.1 V15 25-Aug-2023
+* Synced with latest fox_11.0 changes
+* Adjusted some device settings
+* Updated build vars to latest
+* Added better device detection script
+
 R11.1 V14 07-Nov-2022
 * Adjusted some devive specific settings
 * Exclude /data/fonts from Backup to avoid errors during Backup
