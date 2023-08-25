@@ -8,9 +8,8 @@ export OF_MAINTAINER=Wishmasterflo
 export FOX_BUILD_DEVICE="OnePlus8T"
 export ALLOW_MISSING_DEPENDENCIES=true
 export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER="1"
-export LC_ALL="C"
-export TARGET_DEVICE_ALT="kebab, Kebab, lemonades, lemonkebab, OnePlus8t, OnePlus 8t, OnePlus9r, Oneplus 9r"
-export OF_TARGET_DEVICES="kebab, Kebab, lemonades, lemonkebab, OnePlus8t, OnePlus 8t, OnePlus9r, Oneplus 9r"
+export TARGET_DEVICE_ALT="kebab, Kebab, lemonades, lemonkebab, OnePlus8T, OnePlus 8T, OnePlus9R, OnePlus 9R"
+export OF_TARGET_DEVICES="kebab, Kebab, lemonades, lemonkebab, OnePlus8T, OnePlus 8T, OnePlus9R, OnePlus 9R"
 
 # Use magisk boot for patching
 export OF_USE_MAGISKBOOT=1
@@ -18,13 +17,11 @@ export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES=1
 export OF_DONT_PATCH_ENCRYPTED_DEVICE=1
 
 # We have a/b partitions
-export OF_AB_DEVICE="1"
-export OF_VIRTUAL_AB_DEVICE=1
+export FOX_AB_DEVICE=1
+export FOX_VIRTUAL_AB_DEVICE=1
+export OF_AB_DEVICE_WITH_RECOVERY_PARTITION=1
 
 # Screen specifications
-#export OF_SCREEN_H=1920
-#export OF_SCREEN_W=1080
-#export OF_STATUS_H=100
 export OF_STATUS_INDENT_LEFT=48
 export OF_STATUS_INDENT_RIGHT=48
 export OF_ALLOW_DISABLE_NAVBAR=0
@@ -76,3 +73,5 @@ export OF_USE_LZ4_COMPRESSION=1
 export FOX_USE_NANO_EDITOR="1"
 export OF_DONT_KEEP_LOG_HISTORY="1"
 export OF_NO_SPLASH_CHANGE="1"
+export FOX_INSTALLER_DISABLE_AUTOREBOOT="1"
+
