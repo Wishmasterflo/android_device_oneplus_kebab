@@ -9,7 +9,7 @@ export FOX_BUILD_DEVICE="OnePlus8T"
 export ALLOW_MISSING_DEPENDENCIES=true
 export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER="1"
 export TARGET_DEVICE_ALT="kebab, Kebab, lemonades, lemonkebab, OnePlus8T, OnePlus 8T, OnePlus9R, OnePlus 9R"
-export OF_TARGET_DEVICES="kebab, Kebab, lemonades, lemonkebab, OnePlus8T, OnePlus 8T, OnePlus9R, OnePlus 9R"
+export FOX_TARGET_DEVICES="kebab, Kebab, lemonades, lemonkebab, OnePlus8T, OnePlus 8T, OnePlus9R, OnePlus 9R"
 
 # Use magisk boot for patching
 export OF_USE_MAGISKBOOT=1
@@ -54,7 +54,7 @@ export FOX_BUGGED_AOSP_ARB_WORKAROUND="1601559499"
 
 # -- add settings for R11 --
 export FOX_R11=1
-export FOX_ADVANCED_SECURITY=1
+export OF_ADVANCED_SECURITY=1
 export FOX_ENABLE_APP_MANAGER=1
 export OF_USE_TWRP_SAR_DETECT=1
 export OF_QUICK_BACKUP_LIST="/boot;/data;/super;"
