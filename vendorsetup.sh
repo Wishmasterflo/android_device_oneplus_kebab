@@ -49,7 +49,7 @@ export FOX_BUGGED_AOSP_ARB_WORKAROUND="1601559499"
 
 # -- add settings for R11 --
 export FOX_R11=1
-export FOX_ENABLE_APP_MANAGER=1
+export FOX_ENABLE_APP_MANAGER=0
 export OF_USE_TWRP_SAR_DETECT=1
 export OF_QUICK_BACKUP_LIST="/boot;/data;/super;"
 # -- end R11 settings --
